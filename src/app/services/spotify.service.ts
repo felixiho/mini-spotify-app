@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class SpotifyService{
     private searchUrl: string;
     private artistUrl: string;
-    private authToken: string = 'BQCDQBumK3vm67y-Swfk9qQqq2rqCbOY8Rc4OCLTqOuoYX2FtUNruQ9ab21X5bSKjGroMcZNTwd5v9J4FKimpiFbpfZ_YPtemkNnNgAnyhVmD-KKOu4Q1q9pktOgRuYFpRSPbuLJPu-1ITiFKL7Roh9sn_iEr5IJ-rCjkyrS71DBh4fxwQdXXU8m8xb4H_vkuA71FYhzRoswHonZh5Hc55zdjMgGbGx1EbjvRAqfi5D8ttnzBoeyaAslrfHzpWfaynbx7ulQT94JVPwNEgsfUiw3YKFlWjxLpmJCBMFZG_TaPhK_dE2SgaciQPdH';
+    private authToken: string = 'BQBjItcVDaSjmuT0IXNzXvGUFwKW5McdqPU9mr6oAHoze5CMyvOVCRX8XqnF4UxD61G-0dLYiBh9YNfGh54jkMvSo4_C_UnESmq1QiWFVIeTa1XD7w0lFRUX8db8sHkyf2di729ibuQKIz-YR72t1pE7TIR2R8VVfCrN57oqNAn9igAyIPfBOYuVl1T2T47Iaf39zVY9OPMOtmWEuwIzBygxVdhoH2MJ0QRQD2ncsWO7WBfs9ig_gFDqCqZsMj0EJP13C5iK8tgWlUw0ejbgMY1qe3GG_OddGuBZBqizIe3-tm8oL9kBQn-kohT7';
     constructor(private _http:Http){
 
     }
