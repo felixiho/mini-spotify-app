@@ -1,0 +1,11 @@
+<div class="artist-albums">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let album of albums">
+      <div class="well album">
+        <div *ngIf="album.images.length > 0">
+          <img class="album-thumb img-thumbnail" src="{{album.images[0].url}}" alt="Album image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

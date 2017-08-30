@@ -13,6 +13,9 @@
             <div class="col-md-12">
                 <div class="search-res card text-white bg-dark mb-3">
                     <div class="card-body">
+                        <div *ngIf="res.images.length > 0">
+                            <img class="artists-thumb img-thumbnail" src="{{res.images[2].url}}" alt="">
+                        </div>
                         <h4 class="card-title"><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h4>
                         <div *ngIf="res.genres.length > 1">
                             <strong>Genres: </strong>

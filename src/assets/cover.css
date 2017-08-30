@@ -31,7 +31,6 @@ body {
 }
 body {
   color: #fff;
-  text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
@@ -155,6 +154,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 62rem;
   }
 }

@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 export class SpotifyService{
   private searchUrl: string;
   private artistUrl: string;
-  private authToken: string = 'BQBVTyGlqEGBM6yXnpcuvwkspbjYwnkhLTscjdrgFP7SSaY3jindMpiPC1cW2hMOE_8Tc_97boVVeoBEkk3JflywtBkP7qffOPrViAxUmVeRAe4OalZnrqlQxliUlak9BZitT35DLP771m1SGCEudhV897IhXxWa_6Kmf1-IGSIOZqpdYbv2FM3kGnNHwCNchbGyes3rxyGn0vPM2POfPJlRXOOynxfAZMLuYxS3ssYLb8Bft9ecTI5jCIoJhO9bxeHHirSmkB-RXLp9CCmeuBvSCOhpbTwoTnEGdst5MdiH8NCOZoVWbn34WBzO';
+  private albumUrl: string;
+  private authToken: string = 'BQBQU72daY2z7krPJBi8KnN-Vj3HLkLnOFLMty6EeHdOfZ28iMWsUJ-1jFe7Aa6W5xG5epjWmyLjrXqmcFTdjB8jqh02c2ySy0CLQ_XBtwgzI8na9XsDrmvsXUcwO9fkjmon-Q';
   constructor(private _http:Http){ }
 
   searchMusic(str:string, type='artist'){
@@ -22,6 +23,14 @@ export class SpotifyService{
     headers.append('Authorization', 'Bearer ' + this.authToken);
     this.artistUrl = 'https://api.spotify.com/v1/artists/'+id;
     return this._http.get(this.artistUrl, { headers })
+      .map(res => res.json());
+  }
+
+  getAlbums(artistId:string){
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + this.authToken);
+    this.albumUrl = 'https://api.spotify.com/v1/artists/'+artistId+'/albums';
+    return this._http.get(this.albumUrl, { headers })
       .map(res => res.json());
   }
 }

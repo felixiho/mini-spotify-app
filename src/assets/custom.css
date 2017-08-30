@@ -5,7 +5,7 @@
 .results {
   transition: all 0.5s ease;
   max-height: 412px;
-  overflow:auto;
+  overflow: auto;
   padding: 15px;
 }
 
@@ -15,8 +15,28 @@
   border-bottom: 2px solid #ddd;
 }
 
-.artist-thumb {
-  width: 300px;
+.artists-thumb {
+  width: 96px;
   height: auto;
-  border: 1px solid #282828;
+  float: left;
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
+.artist-thumb {
+  width: 55px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
+.artist-albums {
+  max-height: 400px;
+  overflow: auto;
+  padding: 20px;
+}
+
+.album-thumb {
+  margin-bottom: 17px;
 }
