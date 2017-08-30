@@ -37,8 +37,22 @@
   padding: 20px;
 }
 
-.album-thumb {
-  margin-bottom: 17px;
+.artist-albums h6 {
+  margin-top: 5px;
+}
+
+.artist-albums .card {
+  margin-bottom: 20px;
+  overflow: auto;
+  min-height: 290px;
+}
+
+.album {
+  text-align: center;
+  background-color: #292929;
+  padding: 10px 20px;
+  border: 1px solid #1d1d1d;
+  border-radius: 7px;
 }
 
 .green {

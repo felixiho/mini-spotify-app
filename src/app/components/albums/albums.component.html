@@ -1,9 +1,13 @@
 <div class="artist-albums">
   <div class="row">
     <div class="col-md-3" *ngFor="let album of albums">
-      <div class="well album">
+      <div class="card album">
         <div *ngIf="album.images.length > 0">
-          <img class="album-thumb img-thumbnail" src="{{album.images[0].url}}" alt="Album image">
+          <img class="card-img-top" src="{{album.images[0].url}}" alt="Album image">
+          <div class="card-block">
+            <h6 class="card-title">{{album.name}}</h6>
+            <a href="#" class="btn btn-secondary btn-block">Album details</a>
+          </div>
         </div>
       </div>
     </div>
