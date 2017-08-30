@@ -7,7 +7,7 @@ export class SpotifyService{
   private searchUrl: string;
   private artistUrl: string;
   private albumUrl: string;
-  private authToken: string = 'BQBQU72daY2z7krPJBi8KnN-Vj3HLkLnOFLMty6EeHdOfZ28iMWsUJ-1jFe7Aa6W5xG5epjWmyLjrXqmcFTdjB8jqh02c2ySy0CLQ_XBtwgzI8na9XsDrmvsXUcwO9fkjmon-Q';
+  private authToken: string = 'BQAFxm1JZY5Q_Hwkk1zn5qMyvc6InH2f1noU7FW5lFLr1P30nLZPCoqde9UYPARu87lnJloAJrGzKtTxjrBVmQ65mnpoqGdu15neRjXUV2IpDW4IDFuSUl2cd2S3WQ5U8waKrw';
   constructor(private _http:Http){ }
 
   searchMusic(str:string, type='artist'){
