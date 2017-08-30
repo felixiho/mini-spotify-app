@@ -21,7 +21,7 @@
       <div *ngFor="let track of album.tracks.items">
         <div class="card track-card">
           <div class="card-block">
-            <h6>{{track.track_number}} - {{track.name}} - <small><a href="{{track.preview_url}}" target="_blank"><i class="fa fa-play"></i></a></small></h6>
+            <h6>{{track.track_number}} - {{track.name}} <small *ngIf="track.preview_url"> - <a href="{{track.preview_url}}" target="_blank"><i class="fa fa-play"></i></a></small></h6>
           </div>
         </div>
       </div>
