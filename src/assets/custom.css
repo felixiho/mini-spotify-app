@@ -47,12 +47,39 @@
   min-height: 290px;
 }
 
-.album {
+.tracks-container {
+  max-height: 255px;
+  overflow: auto;
+}
+
+.album-header {
+  margin-bottom: 25px;
+}
+
+.album-card {
   text-align: center;
   background-color: #292929;
   padding: 10px 20px;
   border: 1px solid #1d1d1d;
   border-radius: 7px;
+}
+
+.track-card {
+  background-color: #292929;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #1d1d1d;
+  border-radius: 7px;
+}
+
+.track-card h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.album-thumb {
+  width: 100%;
 }
 
 .green {
@@ -61,4 +88,18 @@
 
 .red {
   color: #d9534f;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 1px solid slategrey;
 }

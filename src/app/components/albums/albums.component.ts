@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: 'albums.component.html'
 })
 export class AlbumsComponent implements OnInit {
-  albums:Album[];
+  albums: Album[];
   constructor(private _spotifyService:SpotifyService, private _route:ActivatedRoute){ }
 
   ngOnInit(){

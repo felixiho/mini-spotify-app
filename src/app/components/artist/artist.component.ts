@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: 'artist.component.html'
 })
 export class ArtistComponent implements OnInit {
-  id:string;
-  artist:Artist[];
+  id: string;
+  artist: Artist[];
   constructor(private _spotifyService:SpotifyService, private _route:ActivatedRoute){ }
 
   ngOnInit(){

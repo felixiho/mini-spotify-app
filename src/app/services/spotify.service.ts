@@ -6,8 +6,9 @@ import 'rxjs/add/operator/map';
 export class SpotifyService{
   private searchUrl: string;
   private artistUrl: string;
+  private albumsUrl: string;
   private albumUrl: string;
-  private authToken: string = 'BQAFxm1JZY5Q_Hwkk1zn5qMyvc6InH2f1noU7FW5lFLr1P30nLZPCoqde9UYPARu87lnJloAJrGzKtTxjrBVmQ65mnpoqGdu15neRjXUV2IpDW4IDFuSUl2cd2S3WQ5U8waKrw';
+  private authToken: string = 'BQAU7snnv7It3RvBphulGX9TZEu-soJTc7FKM5Q5B5tZ0OdxtdjBZp1FQSF52IRE2DXKhk8FUlzdEbWiY3lR2_Lwhfhd3t9D_g7HU42REKt2lL3ZaK4bbxPdQa4FZAcBxlk5XQ';
   constructor(private _http:Http){ }
 
   searchMusic(str:string, type='artist'){
@@ -29,7 +30,15 @@ export class SpotifyService{
   getAlbums(artistId:string){
     let headers = new Headers();
     headers.append('Authorization', 'Bearer ' + this.authToken);
-    this.albumUrl = 'https://api.spotify.com/v1/artists/'+artistId+'/albums';
+    this.albumsUrl = 'https://api.spotify.com/v1/artists/'+artistId+'/albums';
+    return this._http.get(this.albumsUrl, { headers })
+      .map(res => res.json());
+  }
+
+  getAlbum(id:string){
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + this.authToken);
+    this.albumUrl = 'https://api.spotify.com/v1/albums/'+id;
     return this._http.get(this.albumUrl, { headers })
       .map(res => res.json());
   }
