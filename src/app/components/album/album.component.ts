@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SpotifyService} from '../../services/spotify.service';
 import { Album } from '../../../Album';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -12,6 +13,7 @@ export class AlbumComponent  {
   id: string;
   album: Album[];
   constructor(
+    private location:Location,
     private _spotifyService:SpotifyService,
     private _route:ActivatedRoute){
 
@@ -26,5 +28,9 @@ export class AlbumComponent  {
             this.album = album;
           })
       })
+  }
+
+  cancel() {
+    this.location.back(); // <-- go back to previous location on cancel
   }
 }
