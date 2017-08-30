@@ -29,5 +29,8 @@ First run "npm install" to download all the dependencies.
 ## App scaffolding
 The skeleton app was downloaded from Angular repo.
 
+## Spotify API authentication
+This app needs to authenticate with the Spotify API so a token is required. This token can be generated at https://developer.spotify.com/web-api/console/get-search-item/. Then it needs to be added to the variable "authToken" in the file "spotify.service.ts" in the folder "services". This token will last an hour.
+
 ## Development server
 Run `npm start` from a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
