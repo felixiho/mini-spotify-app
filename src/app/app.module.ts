@@ -17,19 +17,19 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports:      [ 
+  imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  declarations: [ 
+  declarations: [
     AppComponent,
-    NavbarComponent, 
-    AboutComponent, 
+    NavbarComponent,
+    AboutComponent,
     SearchComponent,
     ArtistComponent
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
