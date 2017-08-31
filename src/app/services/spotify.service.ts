@@ -4,6 +4,10 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class SpotifyService{
+  public baseUrl= 'https://accounts.spotify.com/authorize/?client_id=';
+  public clientId = '4f8a6fec4c8142bf92f47e2a64b9ae8a';
+  public responseType= '&response_type=token';
+  public redirectUrl= '&redirect_uri=http://localhost:3000';
   private searchUrl: string;
   private artistUrl: string;
   private albumsUrl: string;
@@ -39,9 +43,18 @@ export class SpotifyService{
       .map(res => res.json());
   }
 
+  getNewToken() {
+    window.location.href = this.baseUrl + this.clientId + this.responseType + this.redirectUrl;
+  }
+
+  getTokenFromStorage(){
+    let newToken = JSON.parse(sessionStorage.getItem('spotifytoken')) || {};
+    return newToken;
+  }
+
   private getOptions() {
     let header = new Headers();
-    header.append('Authorization', `Bearer ${this.authToken}`);
+    header.append('Authorization', `Bearer ${this.getTokenFromStorage()}`);
     let options = new RequestOptions({ headers: header });
     return options;
   }
