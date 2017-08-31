@@ -5,11 +5,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-    moduleId: module.id,
-    selector: 'album',
-    templateUrl: 'album.component.html',
+  moduleId: module.id,
+  selector: 'album',
+  templateUrl: 'album.component.html',
 })
-export class AlbumComponent  {
+export class AlbumComponent implements OnInit  {
   id: string;
   album: Album[];
   constructor(
