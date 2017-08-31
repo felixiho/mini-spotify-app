@@ -29,6 +29,6 @@ export class AlbumComponent  {
   }
 
   cancel() {
-    this.location.back(); // <-- go back to previous location on cancel
+    this.location.back(); // <-- go back to previous location
   }
 }
