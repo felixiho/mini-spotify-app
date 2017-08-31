@@ -11,10 +11,7 @@ import { Artist } from '../../../Artist';
 export class SearchComponent  {
     searchStr: string;
     searchRes: Artist[];
-
-    constructor(private _spotifyService:SpotifyService){
-
-    }
+    constructor(private _spotifyService:SpotifyService){ }
 
     searchMusic() {
         this._spotifyService.searchMusic(this.searchStr)

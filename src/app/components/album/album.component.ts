@@ -15,9 +15,7 @@ export class AlbumComponent  {
   constructor(
     private location:Location,
     private _spotifyService:SpotifyService,
-    private _route:ActivatedRoute){
-
-    }
+    private _route:ActivatedRoute){ }
 
   ngOnInit(){
     this._route.params
